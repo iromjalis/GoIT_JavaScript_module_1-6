@@ -64,126 +64,45 @@
 // })();
 //!===============
 
-// Task 3
-
-// const findBestEmployee=(employee)=>{
-//   const arr = Object.entries(employee)
-//   let best=0
-//   let name
-//   for(let item of arr){
-//     console.log(item)
-//     if (item[1] > best){
-//       best = item[1]
-//       name=item[0]
-      
-//     }
-//   }return name
+// Выбрать случайное слово
+// Пока слово не угадано {
+// Показать игроку текущее состояние игры
+// Запросить у игрока вариант ответа
+// Если игрок хочет выйти из игры {
+// Выйти из игры
 // }
-
-// const findBestEmployee = (employers)=>{
-//   return Object.entries(employers).sort((a,b)=> b[1] - a[1])[0][0]
+// Иначе Если вариант ответа — не одиночная буква {
+// Сообщить игроку, что он должен ввести букву
 // }
-
-// console.log(
-//   findBestEmployee({
-//     ann: 29,
-//     david: 35,
-//     helen: 1,
-//     lorence: 99,
-//   }),
-//  ); // lorence
-// console.log(
-//   findBestEmployee({
-//     poly: 12,
-//     mango: 17,
-//     ajax: 4,
-//   }),
-// ); // mango
-// console.log(
-//   findBestEmployee({
-//     lux: 147,
-//     david: 21,
-//     kiwi: 19,
-//     chelsy: 38,
-//   }),
-// ); // lux
-function getObj(){
-  return this
-}
-
-const city1 = {
-  name: 'London',
-  getCity(){
-    return this
-  }
-}
-console.log(city1.getCity())
-
-const city2 = {
-  name: 'Oslo',
-}
-// Task 4
-// У нас есть объект, нужно создать функцию, которая будет его перебирать
-// и если значение какого-то поля это массив (сделать проверку на массив),
-// в таком случае добавляем к объекту obj1 поля в формате 'I like элемент массива', после вызова функции мы должны
-// получить объект вот в таком виде
-// {
-//     'I like c++': "c++",
-//     'I like java': "java",
-//     'I like js': "js",
-//     'i like my work': true,
-//     'my name': "John",
-//     'programming languages': ['js', 'java', 'c++']
+// Иначе {
+// Если такая буква есть в слове {
+// Обновить состояние игры, подставив новую букву
 // }
+// }
+// }
+// Поздравить игрока с победой — слово угадано
+//!str 118
+//! 1.Случайным образом выбирать слово
+// const words = ['word', 'letter', 'personal'];
+// const wordIndex = Math.round(Math.random(words) * words.length);
+// let word = words[wordIndex];
+// console.log(words[wordIndex]);
+//! 2.Запрашивать у игрока вариант ответа(букву)
+// let letter = prompt('Введите букву');
+// const answer = [];
+// for (let i = 0; i < word.length; i++) {
+//   answer[i] = '_';
+// }
+// while (remainingLetter > 0) {}
+// console.log(answer);
+//! 3.Завершить игру по желанию игрока
 
-const obj1 = {
-  'my name': 'John',
-  'i like my work': true,
-  'programming languages': ['js', 'java', 'c++'],
-};
-obj1['ira'] = '32'
-function rend(obj){
-  for(let elem in obj){
-    if (Array.isArray(obj[elem])) {
-      console.log(obj[elem])
-for(const item of obj[elem]){
-  obj[`I like ${item}`] = item
-}
-    }
-  }
+//! 4.Проверить, яввляется ли введеный ответ буквой
 
-}
-rend(obj1)
-console.table(obj1)
-// вызов функции для проверки работоспособности
-// getArr('programming languages')
+//! 5. Вести учет угаданных букв
 
-// Task 5
-// Напиши функцию которая будет считать факториал числа, обязательно использовать рекурсию
+//! 6. Показывать игроку, сколькоо букв он угадал
 
-// Task 6
-// Напиши функцию, которая будет принимать 2 параметра, первый это объект user2 который будем перебирать
-// и второй это строка - имя ключа, который лежит в последнем по вложенности объекте
-// Результат вызова функции - это значение ключа, который мы передаем вторым параметром в функцию
-// Перебираем сначала конкретный объект, когда напишите функцию для объекта user2, можно будет ее оптимизировать
-// под разные объекты
-
-// const user2 = {
-//   name: 'Hacker',
-//   userTechnologies: {
-//     frameworks: {
-//       react: 'this is library',
-//       vue: 'i like this frame',
-//       angular: 'maybe sometime',
-//       libraries: {
-//         axios: 5,
-//         lodash: 4,
-//         pnotify: 3,
-//       },
-//     },
-//   },
-// };
-
-// console.log(getNestedName(user2, 'axios'))  // 5
-// console.log(getNestedName(user2, 'lodash'))  // 4
-// console.log(getNestedName(user2, 'pnotify')) // 3)
+//! 7. Завершать игру, если слово отгадано
+//=======================================================
+alert(null || (2 && 3) || 4);
