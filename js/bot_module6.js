@@ -204,11 +204,7 @@
 //   },
 // ];
 // const array = [];
-// const getUsersWithFriend = (users, friendName) => {
-//   return users.filter((user) => {
-//     if (user.friends.includes(friendName)) return array.push(user.name);
-//   });
-// };
+// 
 //!21===============================================================
 // const getFriends = (users) => {
 //    const arr = users.flatMap(user => user.friends)
