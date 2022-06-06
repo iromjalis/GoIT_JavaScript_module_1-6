@@ -368,20 +368,10 @@
 // ];
 // const MIN_BOOK_RATING = 8;
 
-// const names = [...books]
-// .sort((a, b) => {
-//   const result = a.author[0] > b.author[0];
-
-//   if (result) {
-//     return 1;
-//   }
-
-//   if (!result) {
-//     return -1;
-//   }
-// })
-//   .filter(book => book.rating >= MIN_BOOK_RATING)
-//   .map(book => book.author);
+//const names = [...books]
+ // .filter(book => book.rating >= MIN_BOOK_RATING)
+ // .sort((a, b) => (a.author > b.author ? 1 : -1))
+ // .map(el => el.author);
 //!42==================================================
 // const getNamesSortedByFriendCount = users => {
 //   return [...users]
